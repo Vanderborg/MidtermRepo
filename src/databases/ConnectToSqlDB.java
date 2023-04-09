@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class ConnectToSqlDB {
+public class  ConnectToSqlDB {
 
     public static Connection connect = null;
     public static Statement statement = null;
