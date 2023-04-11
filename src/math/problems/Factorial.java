@@ -15,6 +15,7 @@ public class Factorial {
 
         Scanner scan = new Scanner(System.in);
 
+
         do {
             System.out.println("Enter a number to find its factorial: ");
             number = scan.nextInt();
@@ -34,11 +35,13 @@ public class Factorial {
                 userInput = scan.next();
             }
 
+
         } while (userInput.equalsIgnoreCase("Yes"));
 
         System.out.println("Goodbye!");
     }
 
+    
     public static int factorialRecursive(int n) {
         if (n == 1) {
             return 1;

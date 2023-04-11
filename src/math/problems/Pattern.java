@@ -19,8 +19,10 @@ public class Pattern {
 			if (i < 40){
 				i--;
 			}
+
 			System.out.print(i + ", ");
 		}
+
 
 
 	}
