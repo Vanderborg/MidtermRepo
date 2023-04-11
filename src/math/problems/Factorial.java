@@ -1,6 +1,5 @@
 package math.problems;
 
-
 import java.util.Scanner;
 
 public class Factorial {
@@ -12,36 +11,48 @@ public class Factorial {
          *
          */
         int number;
-
-        System.out.println("Enter a number to give you the factorial number: ");
+        String userInput;
 
         Scanner scan = new Scanner(System.in);
-        number = scan.nextInt();
 
-        int answer = factorialRecursive(number);
-        int answer1 = factorialIterative(number);
+        do {
+            System.out.println("Enter a number to find its factorial: ");
+            number = scan.nextInt();
 
-        System.out.println("Factorial of " + number + " is "  + answer + " (Recursive) ");
-        System.out.println();
-        System.out.println("Factorial of " + number + " is " + answer1 + " (Iterative) ");
+            int answer = factorialRecursive(number);
+            int answer1 = factorialIterative(number);
 
-    }
-        public static int factorialRecursive(int n){
-            if (n == 1){
-                return 1;
-            }else{
+            System.out.println("Factorial of " + number + " is " + answer + " (Recursive) ");
+            System.out.println();
+            System.out.println("Factorial of " + number + " is " + answer1 + " (Iterative) ");
 
-                return n * factorialRecursive(n - 1);
+            System.out.println("Would you like to compute another factorial? (Yes/No): ");
+            userInput = scan.next();
+            while (!userInput.equalsIgnoreCase("Yes") && !userInput.equalsIgnoreCase("No")) {
+                System.out.println("Invalid entry, please select Yes or No.");
+                System.out.println("Would you like to compute another factorial? (Yes/No): ");
+                userInput = scan.next();
             }
 
-        }
-        public static int factorialIterative(int n){
-            int result = 1;
-                for (int i = 1; i <= n ; i++) {
-                    result *= i;
-            }
-                return result;
-        }
+        } while (userInput.equalsIgnoreCase("Yes"));
 
+        System.out.println("Goodbye!");
     }
 
+    public static int factorialRecursive(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n * factorialRecursive(n - 1);
+        }
+    }
+
+    public static int factorialIterative(int n) {
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+}

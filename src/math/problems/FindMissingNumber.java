@@ -23,7 +23,7 @@ public class FindMissingNumber {
                 sum = sum + j;
             }
 
-            return total - sum;
+            return total - sum ;
 
         }
 

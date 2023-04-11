@@ -3,10 +3,10 @@ package string.problems;
 import java.util.Arrays;
 
 public class Anagram {
-    static void isAnagram (String str1, String str2){
+   public static boolean isAnagram (String str1, String str2){
 
-        String s1 = str1.replaceAll("\\s","");
-        String s2 = str2.replaceAll("\\s","");
+        String s1 = str1.replaceAll(" ","");
+        String s2 = str2.replaceAll(" ","");
 
         boolean status = true;
 
@@ -30,13 +30,14 @@ public class Anagram {
 
             System.out.println(s1 + " and " + s2 + " are not anagrams" );
         }
+        return status;
     }
 
     public static void main(String[] args) {
         //Write a Java Program to check if the two String are Anagram. Two String are called Anagram when there is
         //same character but in different order.For example,"CAT" and "ACT", "ARMY" and "MARY".
 
-        isAnagram("rat","tar");
+        isAnagram("elbow","below");
 
     }
 }

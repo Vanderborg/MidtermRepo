@@ -13,6 +13,18 @@ public class FindLowestDifference {
 
 
 
-    }
+        int lowestDifference = Integer.MAX_VALUE;
 
+        for (int i = 0; i < array1.length; i++) {
+            for (int j = 0; j < array2.length; j++) {
+                int difference = Math.abs(array1[i] - array2[j]);
+                if (difference < lowestDifference) {
+                    lowestDifference = difference;
+                }
+            }
+        }
+
+        System.out.println("The lowest difference between cells is " + lowestDifference);
+    }
 }
+

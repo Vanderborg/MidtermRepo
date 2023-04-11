@@ -31,12 +31,20 @@ public class Sort {
         return list;
     }
 
-    public int[] insertionSort(int [] array){
+    public int[] insertionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
-        int [] list = array;
+        int[] list = array;
+
         //implement here
-
-
+        for (int i = 1; i < list.length; i++) {
+            int key = list[i];
+            int j = i - 1;
+            while (j >= 0 && list[j] > key) {
+                list[j + 1] = list[j];
+                j--;
+            }
+            list[j + 1] = key;
+        }
 
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
@@ -45,39 +53,49 @@ public class Sort {
     }
 
     public int[] bubbleSort(int [] array){
-        int [] list = array;
-        //implement here
+        int [] list = array ;
+      //implement here
+        int bublé = list.length;
 
-        
-        
+        for (int i = 0; i < bublé - 1; i++) {
+            for (int j = 0; j < bublé - i - 1; j++) {
+                if (list[j] > list[j + 1]) {
+
+                    int temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                }
+            }
+        }
+
         return list;
     }
-    
+
 
     public int [] mergeSort(int [] array){
         int [] list = array;
         //implement here
-        
-        
 
+
+        //
         return list;
     }
-    
+
 
     public int [] quickSort(int [] array){
         int [] list = array;
         //implement here
-        
-        
+
+
 
         return list;
     }
-    
+
     public int [] heapSort(int [] array){
         int [] list = array;
         //implement here
-        
-        
+
+
 
         return list;
     }
@@ -86,17 +104,17 @@ public class Sort {
     public int [] bucketSort(int [] array){
         int [] list = array;
         //implement here
-        
-        
+
+
 
         return list;
     }
-    
+
     public int [] shellSort(int [] array){
         int [] list = array;
         //implement here
-        
-        
+
+
 
         return list;
     }
