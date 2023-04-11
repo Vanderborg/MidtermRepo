@@ -27,7 +27,6 @@ public class Anagram {
 
             System.out.println(s1 + " and " + s2 + " are anagrams" );
         } else {
-
             System.out.println(s1 + " and " + s2 + " are not anagrams" );
         }
         return status;

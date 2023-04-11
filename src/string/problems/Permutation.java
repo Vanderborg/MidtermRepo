@@ -35,8 +35,10 @@ public class Permutation {
             System.out.println("Enter a String to compute all permutations: ");
             String word = scanner.nextLine();
 
+
             System.out.println("Permutations of " + word + ": ");
             printDistinctString(word, "");
+
 
             String answer = "";
             while (true) {

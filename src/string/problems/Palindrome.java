@@ -36,6 +36,7 @@ public class Palindrome {
             System.out.println("Do you want to check another palindrome? (yes/no)");
             answer = scanner.nextLine();
 
+
             while (!answer.equalsIgnoreCase("yes") && !answer.equalsIgnoreCase("no")) {
                 System.out.println("Invalid Entry, please enter Yes or No");
                 answer = scanner.nextLine().toLowerCase();

@@ -15,6 +15,7 @@ public class DetermineLargestWord {
         String [] array = s.split(" ");
         String longestWord = " ";
 
+        
         for (String value : array) {
             if (value.length() > longestWord.length()) {
                 longestWord = value;

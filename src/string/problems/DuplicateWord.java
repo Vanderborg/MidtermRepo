@@ -32,6 +32,7 @@ public class DuplicateWord {
             }
         }
 
+
         double avgLength = 0;
         int numWords = 0;
         for (String word : words) {
